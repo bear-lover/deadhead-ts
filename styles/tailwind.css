@@ -1,0 +1,58 @@
+@tailwind base;
+
+@font-face {
+    font-family: 'Vimland';
+    src: url('../public/fonts/Vimland.woff2');
+}
+@layer base {
+    html,
+    body {
+        @apply font-inter;
+        @apply bg-black;
+        @apply text-tinted-white;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply leading-none;
+        @apply font-vimland;
+        @apply uppercase;
+        @apply tracking-wider;
+    }
+    a {
+        @apply transition;
+    }
+    button {
+        @apply transition;
+        @apply inline-flex flex-row items-center justify-center;
+    }
+    input[type='text'],
+    textarea {
+        @apply outline-none ring-tinted-white hover:ring-1 focus:border-tinted-white focus:ring-1 focus:ring-tinted-white;
+        @apply border border-tinted-white;
+        @apply bg-transparent;
+        @apply p-3;
+    }
+
+    label {
+        @apply cursor-pointer;
+    }
+    input[type='checkbox'] {
+        @apply cursor-pointer;
+        @apply text-transparent;
+        @apply bg-transparent checked:bg-none;
+        @apply rounded-md;
+        @apply focus:ring-1 focus:ring-tinted-white focus:ring-offset-black;
+        @apply relative;
+        @apply border-tinted-white checked:border-tinted-white checked:hover:border-tinted-white focus:border-tinted-white checked:focus:border-tinted-white focus-visible:border-tinted-white;
+        @apply transition before:absolute before:inset-[3px] before:rounded-sm before:bg-transparent;
+        @apply checked:before:bg-tinted-white;
+    }
+}
+
+@tailwind components;
+
+@tailwind utilities;

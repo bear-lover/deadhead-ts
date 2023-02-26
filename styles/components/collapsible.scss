@@ -1,0 +1,20 @@
+.collapsible .expand {
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.collapsible .expand[aria-expanded='false'] {
+    max-height: 0px;
+    transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
+}
+
+.collapsible .rotate {
+    transform: rotate(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.collapsible .rotate[aria-expanded='false'] {
+    transform: rotate(180deg);
+    transition: transform 0.2s cubic-bezier(0, 1, 0, 1);
+}

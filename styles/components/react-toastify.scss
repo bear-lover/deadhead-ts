@@ -1,0 +1,9 @@
+@media (min-width: 481px) {
+    .Toastify__toast-container {
+        min-width: 480px;
+    }
+}
+
+.Toastify__toast {
+    @apply font-inter;
+}
